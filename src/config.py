@@ -1,7 +1,11 @@
 import os
-from dotenv import load_dotenv
+from dotenv import dotenv_values
 
-load_dotenv()
+env_file = dotenv_values(".env")
 
-TEST = os.getenv("TEST")
-print(TEST)
+class Config:
+    DEBUG = env_file.get("DEBUG") or os.getenv("DEBUG", True)
+    LOG_LEVEL = env_file.get("LOG_LEVEL")
+    LOG_FILE = env_file.get("LOG_FILE")
+
+config = Config()
