@@ -3,5 +3,5 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-class Config:
-    
+TEST = os.getenv("TEST")
+print(TEST)

@@ -1,7 +1,7 @@
 [tool.poetry]
-name = "project-initial"
+name = "python-project-initial"
 version = "0.0.1"
-description = ""
+description = "python项目脚手架"
 authors = ["WalterZhu <hqzhu0461@163.com>"]
 readme = "README.md"
 packages = [
@@ -15,6 +15,7 @@ server = "main:server"
 [tool.poetry.dependencies]
 python = "^3.11"
 pytest = "^7.2.1"
+python-dotenv = "^1.0.0"
 
 [tool.pytest.ini_options]
 addopts = "-v -W ignore::DeprecationWarning"
