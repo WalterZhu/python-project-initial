@@ -1,7 +1,6 @@
 from copy import deepcopy
 
-
-def deep_merge_dict(x, y):
+def deep_merge_dict(x: dict, y: dict) -> dict:
     """
     深合并字典
     :param x:
