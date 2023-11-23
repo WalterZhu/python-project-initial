@@ -29,3 +29,6 @@ eggs/
 __pycache__/
 *.pyc
 *.log
+
+# config file
+.env
