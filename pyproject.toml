@@ -10,7 +10,7 @@ packages = [
 ]
 
 [tool.poetry.scripts]
-server = "main:server"
+server = "main:main"
 
 [tool.poetry.dependencies]
 python = "^3.11"

@@ -14,3 +14,11 @@ def deep_merge_dict(x: dict, y: dict) -> dict:
             if isinstance(x[k], dict) and isinstance(y[k], dict):
                 z[k] = deep_merge_dict(x[k], y[k])
     return z
+
+def str_to_bool(s, default):
+    if s == 'True':
+        return True
+    elif s == 'False':
+        return False
+    else:
+        return default

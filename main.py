@@ -1,5 +1,7 @@
 import src.setup as setup
 
-if __name__ == '__main__':
-    print('Starting...')
+def main():
     setup.start()
+
+if __name__ == '__main__':
+    main()

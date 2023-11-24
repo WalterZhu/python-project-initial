@@ -6,13 +6,13 @@ def setup_logger() -> logging.Logger:
     '''
     初始化日志管理器和格式化
     '''
-    logger = logging.getLogger('logger')
     log_level_name = config.LOG_LEVEL
     log_level = getattr(logging, log_level_name.upper(), None)
+    logger = logging.getLogger()
+    logger.setLevel(logging.DEBUG)
     formatter = logging.Formatter('[%(levelname)s %(asctime)s] %(filename)s: %(message)s')
 
     if config.DEBUG == True:
-        print('DEBUG模式')
         stream_handler = logging.StreamHandler(sys.stdout)
         stream_handler.setLevel(log_level)
         stream_handler.setFormatter(formatter)
@@ -26,3 +26,5 @@ def setup_logger() -> logging.Logger:
     return logger
 
 logger = setup_logger()
+
+__all__ = [logger]
